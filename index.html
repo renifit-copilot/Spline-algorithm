@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактор сплайнов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="canvas-container">
+            <canvas id="splineCanvas"></canvas>
+        </div>
+        <div class="controls">
+            <div class="actions">
+                <button id="addPointBtn">Добавить точку</button>
+                <button id="clearBtn">Очистить всё</button>
+            </div>
+            <div class="point-editor">
+                <h3>Редактирование точки</h3>
+                <div class="input-group">
+                    <label for="pointIndexSelect">Выбрать точку:</label>
+                    <select id="pointIndexSelect"></select>
+                </div>
+                <div class="input-group">
+                    <label for="pointX">X:</label>
+                    <input type="number" id="pointX" step="1">
+                </div>
+                <div class="input-group">
+                    <label for="pointY">Y:</label>
+                    <input type="number" id="pointY" step="1">
+                </div>
+                <button id="movePointBtn">Переместить точку</button>
+                <button id="deletePointBtn">Удалить точку</button>
+            </div>
+            <div class="points-list">
+                <h3>Список точек</h3>
+                <div class="table-container">
+                    <table id="pointsTable">
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>X</th>
+                                <th>Y</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html> 
