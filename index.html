@@ -7,17 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Редактор сплайнов</h1>
+    <p class="subtitle">Интерактивное создание и редактирование кубических сплайнов</p>
+    
     <div class="container">
-        <div class="canvas-container">
-            <canvas id="splineCanvas"></canvas>
+        <div class="canvas-wrapper">
+            <canvas id="splineCanvas" width="600" height="600"></canvas>
         </div>
+        
         <div class="controls">
-            <div class="actions">
+            <fieldset>
+                <legend>Управление</legend>
                 <button id="addPointBtn">Добавить точку</button>
                 <button id="clearBtn">Очистить всё</button>
-            </div>
-            <div class="point-editor">
-                <h3>Редактирование точки</h3>
+            </fieldset>
+
+            <fieldset>
+                <legend>Редактирование точки</legend>
                 <div class="input-group">
                     <label for="pointIndexSelect">Выбрать точку:</label>
                     <select id="pointIndexSelect"></select>
@@ -32,9 +38,10 @@
                 </div>
                 <button id="movePointBtn">Переместить точку</button>
                 <button id="deletePointBtn">Удалить точку</button>
-            </div>
-            <div class="points-list">
-                <h3>Список точек</h3>
+            </fieldset>
+
+            <fieldset>
+                <legend>Список точек</legend>
                 <div class="table-container">
                     <table id="pointsTable">
                         <thead>
@@ -47,9 +54,9 @@
                         <tbody></tbody>
                     </table>
                 </div>
-            </div>
+            </fieldset>
         </div>
     </div>
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html> 
